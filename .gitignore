@@ -25,6 +25,12 @@ build/
 *.swo
 *~
 
+# JavaScript
+*.js
+*.ts
+*.jsx
+*.tsx
+
 # Docker
 docker-compose.yml
 Dockerfile
