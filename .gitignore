@@ -30,7 +30,9 @@ build/
 *.ts
 *.jsx
 *.tsx
-
+*.json
+*.css
+*.scss
 # Docker
 docker-compose.yml
 Dockerfile
