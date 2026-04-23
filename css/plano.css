@@ -8,6 +8,35 @@ h1 {
     background: #f4f4f4;
 }
 
+/* HEADER */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* NAV */
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #0ea5e9;
+}
 .container {
     padding: 20px;
 }
