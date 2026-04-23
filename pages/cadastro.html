@@ -5,10 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro PowerFit</title>
+    <link rel="stylesheet" href="../css/cadastro.css">
 </head>
 
 <body>
-    <form action="">
+    <header>
+        <h1>Cadastro PowerFit</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html#inicio">Início</a></li>
+                <li><a href="../index.html#motivacao">Motivação</a></li>
+                <li><a href="../index.html#catalogo">Exercícios</a></li>
+                <li><a href="../index.html#faq">FAQ</a></li>
+                <li><a href="./catalogo.html">Catalogo</a></li>
+                <li><a href="./plano.html">Planos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form action="./dashboard.html" method="post">
         <label for="nome">Nome:</label>
         <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required minlength="2" maxlength="100"
             autocomplete="name">
@@ -58,9 +72,9 @@
 
 
     <p>
-        Já tem conta? <a href="pages/login.html">Login</a>
+        Já tem conta? <a href="./login.html">Login</a>
     </p>
-        <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 PowerFit. Todos os direitos reservados.</p>
     </footer>
