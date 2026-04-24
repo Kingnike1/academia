@@ -22,6 +22,7 @@ header h1 {
 /* NAV */
 nav ul {
     list-style: none;
+    padding: 0;
 }
 
 nav li {
@@ -44,41 +45,53 @@ form {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     text-align: center;
 }
+
 form div {
     margin-bottom: 15px;
     text-align: left;
 }
+
 form label {
-    display: flex;
+    display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
-form input {
+
+form input,
+form select {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
+
 form button {
+    width: 100%;
     background-color: #0ea5e9;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
 }
+
 form button:hover {
     background-color: #0b8ac9;
 }
-form select {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 30px;
+
+@media (max-width: 768px) {
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    body {
+        padding: 10px;
+    }
 }
