@@ -14,33 +14,56 @@ form {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 400px;
+
+    width: 100%;
+    max-width: 400px;
+
     text-align: center;
 }
+
 form div {
     margin-bottom: 15px;
     text-align: left;
 }
+
 form label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
+
 form input {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
+/* botão melhor no mobile */
 form button {
+    width: 100%;
+    margin-top: 10px;
+
     background-color: #0ea5e9;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
 }
+
 form button:hover {
     background-color: #0b8ac9;
+}
+
+/* ajustes finos para telas pequenas */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    form {
+        padding: 15px;
+    }
 }
