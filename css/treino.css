@@ -19,11 +19,16 @@ header h1 {
 /* NAV */
 nav ul {
     list-style: none;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 nav li {
-    display: inline-block;
-    margin: 0 10px;
+    margin: 0;
 }
 
 nav a {
@@ -35,6 +40,7 @@ nav a {
 nav a:hover {
     color: #0ea5e9;
 }
+
 h1 {
     text-align: center;
     color: #007bff;
@@ -43,10 +49,13 @@ h1 {
 
 section {
     background-color: #fff;
-    margin: 20px 0;
+    margin: 20px auto;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    width: 100%;
+    max-width: 900px;
 }
 
 h2 {
@@ -75,4 +84,19 @@ footer {
     padding: 10px;
     background-color: #333;
     color: #fff;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    section {
+        padding: 15px;
+    }
 }
