@@ -3,65 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | PowerFit Premium</title>
+    <title>Meu Painel | PowerFit Premium</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos específicos para o Dashboard para elevar o nível de UX */
+        .dashboard-container {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            min-height: 100vh;
+            background-color: var(--dark-bg);
+        }
+
+        .sidebar {
+            background: #1e293b;
+            padding: 40px 20px;
+            border-right: 1px solid #334155;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-nav {
+            list-style: none;
+        }
+
+        .sidebar-nav li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar-nav a {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            border-radius: 10px;
+            color: #94a3b8;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .sidebar-nav a:hover, .sidebar-nav a.active {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--primary-color);
+        }
+
+        .main-content {
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px solid #334155;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .stat-card h4 {
+            color: #94a3b8;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .stat-card .value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .stat-card .trend {
+            font-size: 0.8rem;
+            margin-top: 10px;
+        }
+
+        .trend.up { color: #22c55e; }
+        .trend.down { color: #ef4444; }
+
+        .dashboard-section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .workout-card {
+            background: #1e293b;
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid #334155;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .workout-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .workout-tags {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .tag {
+            background: #334155;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            color: #cbd5e1;
+        }
+
+        @media (max-width: 992px) {
+            .dashboard-container {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                display: none; /* Simplificação para mobile */
+            }
+        }
+    </style>
 </head>
-<body style="padding-top: 100px;">
+<body>
 
-    <header class="main-header">
-        <div class="container">
-            <a href="../index.html" class="logo" style="text-decoration:none;">Power<span>Fit</span></a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="../index.html">Início</a></li>
-                    <li><a href="catalogo.html">Treinos</a></li>
-                    <li><a href="../index.html" class="btn btn-secondary" style="padding: 8px 20px;">Sair</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="container">
-        <div style="margin-bottom: 40px;">
-            <h2 style="text-align: left;">Olá, <span style="color: var(--primary-color);">Guerreiro(a)</span>!</h2>
-            <p style="color: #94a3b8;">Aqui está o resumo da sua jornada hoje.</p>
-        </div>
-
-        <div class="service-grid">
-            <div class="service-item">
-                <h3 style="font-size: 1rem; color: #94a3b8;">Plano Ativo</h3>
-                <p style="font-size: 1.5rem; color: #fff; margin: 10px 0;">Premium</p>
-                <a href="plano.html" style="font-size: 0.8rem; color: var(--primary-color);">Ver detalhes</a>
+    <div class="dashboard-container">
+        <!-- SIDEBAR: Navegação lateral de elite -->
+        <aside class="sidebar">
+            <div class="logo" style="margin-bottom: 20px;">Power<span>Fit</span></div>
+            <ul class="sidebar-nav">
+                <li><a href="#" class="active">Visão Geral</a></li>
+                <li><a href="treino.html">Meus Treinos</a></li>
+                <li><a href="catalogo.html">Explorar</a></li>
+                <li><a href="plano.html">Meu Plano</a></li>
+                <li><a href="#">Configurações</a></li>
+            </ul>
+            <div style="margin-top: auto;">
+                <a href="../index.html" class="btn btn-secondary" style="width: 100%; text-align: center;">Sair</a>
             </div>
-            <div class="service-item">
-                <h3 style="font-size: 1rem; color: #94a3b8;">Treinos Concluídos</h3>
-                <p style="font-size: 1.5rem; color: #fff; margin: 10px 0;">12 este mês</p>
-                <span style="font-size: 0.8rem; color: #22c55e;">+2 que o mês passado</span>
-            </div>
-            <div class="service-item">
-                <h3 style="font-size: 1rem; color: #94a3b8;">Próxima Avaliação</h3>
-                <p style="font-size: 1.5rem; color: #fff; margin: 10px 0;">Em 15 dias</p>
-                <a href="#" style="font-size: 0.8rem; color: var(--primary-color);">Agendar agora</a>
-            </div>
-        </div>
+        </aside>
 
-        <div style="margin-top: 60px; background: #1e293b; padding: 40px; border-radius: 20px; border: 1px solid #334155;">
-            <h3 style="margin-bottom: 20px;">Seu Treino de Hoje</h3>
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+        <!-- MAIN CONTENT: Painel principal com estatísticas -->
+        <main class="main-content">
+            <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
                 <div>
-                    <h4 style="color: #fff; font-size: 1.2rem;">Força Total & Hipertrofia</h4>
-                    <p style="color: #94a3b8;">Foco: Peito e Tríceps | Duração: 60min</p>
+                    <h2 style="text-align: left; margin-bottom: 5px;">Olá, <span style="color: var(--primary-color);">João</span>!</h2>
+                    <p style="color: #94a3b8;">Sua jornada está 85% concluída este mês. Continue assim!</p>
                 </div>
-                <a href="treino.html" class="btn btn-primary">Iniciar Treino</a>
-            </div>
-        </div>
-    </section>
+                <div style="width: 50px; height: 50px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #0f172a;">JS</div>
+            </header>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 PowerFit Premium. Todos os direitos reservados.</p>
-        </div>
+            <!-- STATS: Cards de métricas rápidas -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h4>Treinos Concluídos</h4>
+                    <div class="value">18</div>
+                    <div class="trend up">▲ 12% desde a última semana</div>
+                </div>
+                <div class="stat-card">
+                    <h4>Calorias Estimadas</h4>
+                    <div class="value">12.4k</div>
+                    <div class="trend up">▲ 5% em relação ao mês anterior</div>
+                </div>
+                <div class="stat-card">
+                    <h4>Frequência</h4>
+                    <div class="value">92%</div>
+                    <div class="trend up">▲ Meta batida!</div>
+                </div>
+            </div>
+
+            <!-- NEXT WORKOUT: Chamada para ação principal -->
+            <div class="dashboard-section-title">
+                <h3 style="margin-bottom: 0;">Próximo Desafio</h3>
+                <a href="catalogo.html" style="color: var(--primary-color); font-size: 0.9rem;">Ver cronograma completo</a>
+            </div>
+
+            <div class="workout-card">
+                <div class="workout-info">
+                    <h3>Peito & Tríceps (Hipertrofia)</h3>
+                    <p style="color: #94a3b8;">Duração estimada: 55 minutos | Intensidade: Alta</p>
+                    <div class="workout-tags">
+                        <span class="tag">Força</span>
+                        <span class="tag">Elite</span>
+                        <span class="tag">Músculo</span>
+                    </div>
+                </div>
+                <a href="treino.html" class="btn btn-primary">Iniciar Agora</a>
+            </div>
+
+            <!-- RECENT ACTIVITY: Lista de conquistas recentes -->
+            <div style="margin-top: 50px;">
+                <h3 style="margin-bottom: 20px;">Conquistas Recentes</h3>
+                <div style="display: grid; gap: 15px;">
+                    <div style="display: flex; align-items: center; gap: 15px; background: rgba(56, 189, 248, 0.05); padding: 15px; border-radius: 12px; border: 1px solid rgba(56, 189, 248, 0.1);">
+                        <div style="font-size: 1.5rem;">🏆</div>
+                        <div>
+                            <p style="font-weight: 600; color: #fff;">Novo Recorde no Agachamento!</p>
+                            <p style="font-size: 0.8rem; color: #94a3b8;">Você alcançou 100kg pela primeira vez ontem.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 15px; background: rgba(56, 189, 248, 0.05); padding: 15px; border-radius: 12px; border: 1px solid rgba(56, 189, 248, 0.1);">
+                        <div style="font-size: 1.5rem;">🔥</div>
+                        <div>
+                            <p style="font-weight: 600; color: #fff;">Sequência de 5 Dias</p>
+                            <p style="font-size: 0.8rem; color: #94a3b8;">Sua disciplina está em um nível incrível esta semana.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer style="padding: 20px; background: #0f172a; border-top: 1px solid #334155; text-align: center;">
+        <p style="color: #64748b; font-size: 0.8rem;">&copy; 2026 PowerFit Premium. Sistema de Gestão de Performance.</p>
     </footer>
 
 </body>
