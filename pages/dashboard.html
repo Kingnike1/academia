@@ -1,65 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard - PowerFit</title>
-    <link rel="stylesheet" href="../css/dashboard.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - PowerFit Premium</title>
+    <link rel="stylesheet" href="../css/style.css"> <!-- Link para o CSS principal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div class="container">
-        <header>
-            <h1>Dashboard do Aluno</h1>
-        </header>
 
-        <section>
-            <h2>Bem-vindo!</h2>
-            <p>Aluno: João da Silva</p>
-            <p>Plano atual: Premium</p>
-        </section>
+    <!-- HEADER: Navegação principal do site (simplificada para páginas internas) -->
+    <header class="main-header">
+        <div class="container">
+            <a href="../index.html" class="logo">PowerFit <span class="premium">Premium</span></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html#hero">Início</a></li>
+                    <li><a href="../index.html#about">Sobre Nós</a></li>
+                    <li><a href="../index.html#services">Serviços</a></li>
+                    <li><a href="../index.html#gallery">Galeria</a></li>
+                    <li><a href="../index.html#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <section>
-            <h2>Acessos rápidos</h2>
-            <div class="quick-links">
-                <div class="card">
-                    <h3>Planos</h3>
-                    <p>Veja todos os planos disponíveis.</p>
-                    <a href="plano.html">Acessar</a>
+    <!-- DASHBOARD SECTION: Conteúdo do dashboard do usuário -->
+    <section id="dashboard" class="dashboard-section">
+        <div class="container">
+            <h2>Bem-vindo(a) ao Seu Dashboard, [Nome do Usuário]!</h2>
+            <p>Aqui você pode acompanhar seu progresso, acessar seus treinos e gerenciar seu plano.</p>
+
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <h3>Meu Progresso</h3>
+                    <p>Veja suas estatísticas de treino, peso e medidas.</p>
+                    <a href="#" class="btn btn-primary">Ver Progresso</a>
                 </div>
-
-                <div class="card">
-                    <h3>Treinos</h3>
-                    <p>Acesse seus treinos do plano atual.</p>
-                    <a href="treino.html#premium">Acessar</a>
+                <div class="dashboard-card">
+                    <h3>Meu Treino</h3>
+                    <p>Acesse seu plano de treino personalizado e registre suas atividades.</p>
+                    <a href="treino.html" class="btn btn-primary">Acessar Treino</a>
                 </div>
-
-                <div class="card">
-                    <h3>Cadastro</h3>
-                    <p>Atualize seus dados pessoais.</p>
-                    <a href="cadastro.html">Acessar</a>
+                <div class="dashboard-card">
+                    <h3>Meu Plano</h3>
+                    <p>Gerencie sua assinatura, veja detalhes do plano e opções de upgrade.</p>
+                    <a href="plano.html" class="btn btn-primary">Gerenciar Plano</a>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Catálogo de Exercícios</h3>
+                    <p>Explore nossa vasta biblioteca de exercícios com vídeos e descrições.</p>
+                    <a href="catalogo.html" class="btn btn-primary">Ver Catálogo</a>
                 </div>
             </div>
-        </section>
 
-        <section>
-            <h2>Resumo</h2>
-            <ul class="summary-list">
-                <li class="summary-item">
-                    <p>Treinos disponíveis</p>
-                    <strong>9</strong>
-                </li>
-                <li class="summary-item">
-                    <p>Duração média</p>
-                    <strong>45 minutos</strong>
-                </li>
-            </ul>
-        </section>
+            <div class="recent-activity">
+                <h3>Atividade Recente</h3>
+                <ul>
+                    <li>Treino de Pernas concluído - 06/05/2026</li>
+                    <li>Registro de peso: 75kg - 05/05/2026</li>
+                    <li>Nova aula de Yoga adicionada ao seu plano - 04/05/2026</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-        <footer>
-            <p>&copy; 2026 PowerFit. Todos os direitos reservados.</p>
-        </footer>
-    </div>
+    <!-- FOOTER: Informações de copyright e links úteis -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2026 PowerFit Premium. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
-
 </html>

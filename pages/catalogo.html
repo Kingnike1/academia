@@ -1,102 +1,89 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo - Academia</title>
-    <link rel="stylesheet" href="../css/catalogo.css">
+    <title>Catálogo de Exercícios - PowerFit Premium</title>
+    <link rel="stylesheet" href="../css/style.css"> <!-- Link para o CSS principal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <header>
-        <h1>PowerFit</h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html#inicio">Início</a></li>
-                <li><a href="../index.html#motivacao">Motivação</a></li>
-                <li><a href="../index.html#catalogo">Exercícios</a></li>
-                <li><a href="../index.html#faq">FAQ</a></li>
-                <li><a href="./cadastro.html">Cadastro</a></li>
-                <li><a href="./plano.html">Planos</a></li>
-            </ul>
-        </nav>
+
+    <!-- HEADER: Navegação principal do site (simplificada para páginas internas) -->
+    <header class="main-header">
+        <div class="container">
+            <a href="../index.html" class="logo">PowerFit <span class="premium">Premium</span></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html#hero">Início</a></li>
+                    <li><a href="../index.html#about">Sobre Nós</a></li>
+                    <li><a href="../index.html#services">Serviços</a></li>
+                    <li><a href="../index.html#gallery">Galeria</a></li>
+                    <li><a href="../index.html#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <div id="container">
+    <!-- CATALOGO SECTION: Lista de exercícios -->
+    <section id="catalogo" class="catalogo-section">
+        <div class="container">
+            <h2>Nosso Catálogo de Exercícios</h2>
+            <p>Explore uma vasta gama de exercícios para todos os grupos musculares e níveis de condicionamento.</p>
 
-
-        <section>
-            <div>
-
-                <h2>Equipe de Professores</h2>
-                <p>Contamos com uma equipe qualificada para te ajudar em todos os treinos.</p>
-
-                <ul>
-                    <li>Musculação: 5 professores</li>
-                    <li>Crossfit: 3 professores</li>
-                    <li>Yoga: 2 professores</li>
-                    <li>Natação: 2 professores</li>
-                    <li>Dança: 2 professores</li>
-                    <li>Spinning: 1 professor</li>
-                </ul>
+            <div class="exercicio-grid">
+                <div class="exercicio-card">
+                    <img src="../img/exercicio1.jpg" alt="Agachamento">
+                    <h3>Agachamento Livre</h3>
+                    <p>Fortalece pernas e glúteos. Essencial para força funcional.</p>
+                    <a href="treino.html" class="btn btn-primary">Ver Detalhes</a>
+                </div>
+                <div class="exercicio-card">
+                    <img src="../img/exercicio2.jpg" alt="Supino">
+                    <h3>Supino Reto</h3>
+                    <p>Desenvolve peitoral, ombros e tríceps. Um clássico da musculação.</p>
+                    <a href="treino.html" class="btn btn-primary">Ver Detalhes</a>
+                </div>
+                <div class="exercicio-card">
+                    <img src="../img/exercicio3.jpg" alt="Remada">
+                    <h3>Remada Curvada</h3>
+                    <p>Trabalha as costas e bíceps, melhorando a postura e força.</p>
+                    <a href="treino.html" class="btn btn-primary">Ver Detalhes</a>
+                </div>
+                <div class="exercicio-card">
+                    <img src="../img/exercicio4.jpg" alt="Desenvolvimento">
+                    <h3>Desenvolvimento Ombro</h3>
+                    <p>Foca nos deltoides, construindo ombros fortes e definidos.</p>
+                    <a href="treino.html" class="btn btn-primary">Ver Detalhes</a>
+                </div>
+                <div class="exercicio-card">
+                    <img src="../img/exercicio5.jpg" alt="Prancha">
+                    <h3>Prancha Abdominal</h3>
+                    <p>Fortalece o core, melhora a estabilidade e reduz dores nas costas.</p>
+                    <a href="treino.html" class="btn btn-primary">Ver Detalhes</a>
+                </div>
+                <div class="exercicio-card">
+                    <img src="../img/exercicio6.jpg" alt="Afundo">
+                    <h3>Afundo com Halteres</h3>
+                    <p>Exercício unilateral para pernas e glúteos, melhora equilíbrio.</p>
+                    <a href="treino.html" class="btn btn-primary">Ver Detalhes</a>
+                </div>
             </div>
-        </section>
-        <section>
-            <div>
+        </div>
+    </section>
 
-                <h2>Horários</h2>
-
-                <ul>
-                    <li>Segunda a Sexta: 06:00 - 23:00</li>
-                    <li>Sábado: 08:00 - 19:00</li>
-                    <li>Domingo: 08:00 - 15:00</li>
-                </ul>
+    <!-- FOOTER: Informações de copyright e links úteis -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2026 PowerFit Premium. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Termos de Uso</a>
             </div>
-        </section>
-        <section>
-            <div>
-
-                <h2>Estrutura da Academia</h2>
-
-                <ul>
-                    <li>Capacidade: até 150 alunos simultaneamente</li>
-                    <li>Área de musculação completa</li>
-                    <li>Sala de aulas coletivas</li>
-                    <li>Piscina aquecida</li>
-                    <li>Vestiários equipados</li>
-                </ul>
-            </div>
-        </section>
-        <section>
-            <div>
-
-                <h2>Benefícios</h2>
-
-                <ul>
-                    <li>Acompanhamento profissional</li>
-                    <li>Ambiente climatizado</li>
-                    <li>Planos acessíveis</li>
-                    <li>Treinos personalizados</li>
-                    <li>Aulas variadas</li>
-                </ul>
-            </div>
-        </section>
-        <section>
-            <div>
-
-                <h2>Contato</h2>
-
-                <p>Email: contato@powerfit.com</p>
-                <p>Telefone: (62) 99999-9999</p>
-                <p>Endereço: Goiânia - GO</p>
-            </div>
-        </section>
-    </div>
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2026 PowerFit. Todos os direitos reservados.</p>
+        </div>
     </footer>
-</body>
 
+</body>
 </html>

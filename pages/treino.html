@@ -1,113 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalogo de treinos</title>
-    <link rel="stylesheet" href="../css/treino.css">
+    <title>Treino - PowerFit Premium</title>
+    <link rel="stylesheet" href="../css/style.css"> <!-- Link para o CSS principal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <header>
 
-        <h1>Catalogo de Treinos</h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html#inicio">Início</a></li>
-                <li><a href="../index.html#motivacao">Motivação</a></li>
-                <li><a href="../index.html#catalogo">Exercícios</a></li>
-                <li><a href="../index.html#faq">FAQ</a></li>
-                <li><a href="./cadastro.html">Cadastro</a></li>
-                <li><a href="./plano.html">Planos</a></li>
-            </ul>
-        </nav>
+    <!-- HEADER: Navegação principal do site (simplificada para páginas internas) -->
+    <header class="main-header">
+        <div class="container">
+            <a href="../index.html" class="logo">PowerFit <span class="premium">Premium</span></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html#hero">Início</a></li>
+                    <li><a href="../index.html#about">Sobre Nós</a></li>
+                    <li><a href="../index.html#services">Serviços</a></li>
+                    <li><a href="../index.html#gallery">Galeria</a></li>
+                    <li><a href="../index.html#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <!-- PLANO BÁSICO -->
-    <section id="basico">
-    <h2>Plano Básico</h2>
-    <p><strong>Exclusivo para assinantes do Plano Básico.</strong></p>
-    <p>Ideal para iniciantes que estão começando na academia.</p>
 
-        <h3>Treino 1 - Peito</h3>
-        <ul>
-            <li>Supino reto: 3x10</li>
-            <li>Supino inclinado: 3x10</li>
-            <li>Crossover: 3x12</li>
-        </ul>
+    <!-- TREINO SECTION: Detalhes de um treino específico -->
+    <section id="treino" class="treino-section">
+        <div class="container">
+            <h2>Treino de Força Total</h2>
+            <p class="treino-description">Este treino é focado no desenvolvimento de força e massa muscular, abrangendo os principais grupos musculares do corpo.</p>
 
-        <h3>Treino 2 - Pernas</h3>
-        <ul>
-            <li>Agachamento: 3x10</li>
-            <li>Leg press: 3x10</li>
-            <li>Panturrilha: 3x15</li>
-        </ul>
+            <div class="treino-details">
+                <div class="detail-item">
+                    <h3>Duração</h3>
+                    <p>60-75 minutos</p>
+                </div>
+                <div class="detail-item">
+                    <h3>Frequência</h3>
+                    <p>3 vezes por semana</p>
+                </div>
+                <div class="detail-item">
+                    <h3>Nível</h3>
+                    <p>Intermediário/Avançado</p>
+                </div>
+            </div>
 
-        <h3>Treino 3 - Braços</h3>
-        <ul>
-            <li>Rosca direta: 3x10</li>
-            <li>Tríceps testa: 3x10</li>
-            <li>Rosca martelo: 3x12</li>
-        </ul>
+            <div class="exercicios-list">
+                <h3>Exercícios</h3>
+                <div class="exercicio-item">
+                    <h4>Agachamento Livre</h4>
+                    <p>4 séries de 8-12 repetições</p>
+                    <p class="equipment">Equipamento: Barra, Anilhas</p>
+                </div>
+                <div class="exercicio-item">
+                    <h4>Supino Reto com Barra</h4>
+                    <p>4 séries de 8-12 repetições</p>
+                    <p class="equipment">Equipamento: Barra, Anilhas, Banco</p>
+                </div>
+                <div class="exercicio-item">
+                    <h4>Remada Curvada</h4>
+                    <p>4 séries de 8-12 repetições</p>
+                    <p class="equipment">Equipamento: Barra, Anilhas</p>
+                </div>
+                <div class="exercicio-item">
+                    <h4>Desenvolvimento com Halteres</h4>
+                    <p>3 séries de 10-15 repetições</p>
+                    <p class="equipment">Equipamento: Halteres, Banco</p>
+                </div>
+                <div class="exercicio-item">
+                    <h4>Elevação Lateral</h4>
+                    <p>3 séries de 12-15 repetições</p>
+                    <p class="equipment">Equipamento: Halteres</p>
+                </div>
+            </div>
+
+            <div class="treino-tips">
+                <h3>Dicas Importantes</h3>
+                <ul>
+                    <li>Mantenha a forma correta em todos os exercícios para evitar lesões.</li>
+                    <li>Descanse de 60 a 90 segundos entre as séries.</li>
+                    <li>Aumente a carga progressivamente para continuar desafiando seus músculos.</li>
+                    <li>Não se esqueça de um bom aquecimento antes e alongamento depois do treino.</li>
+                </ul>
+            </div>
+
+            <a href="catalogo.html" class="btn btn-secondary">Voltar ao Catálogo</a>
+        </div>
     </section>
 
-   <section id="intermediario">
-    <h2>Plano Intermediário</h2>
-    <p><strong>Exclusivo para assinantes do Plano Intermediário.</strong></p>
-    <p>Para quem já treina regularmente e busca evolução.</p>
-
-        <h3>Treino 1 - Peito e Tríceps</h3>
-        <ul>
-            <li>Supino reto: 4x10</li>
-            <li>Crucifixo: 3x12</li>
-            <li>Tríceps corda: 3x12</li>
-        </ul>
-
-        <h3>Treino 2 - Costas e Bíceps</h3>
-        <ul>
-            <li>Barra fixa: 3x8</li>
-            <li>Remada: 3x10</li>
-            <li>Rosca direta: 3x10</li>
-        </ul>
-
-        <h3>Treino 3 - Pernas</h3>
-        <ul>
-            <li>Agachamento: 4x10</li>
-            <li>Leg press: 3x12</li>
-            <li>Stiff: 3x10</li>
-        </ul>
-    </section>
-
-  <section id="premium">
-    <h2>Plano Premium</h2>
-    <p><strong>Exclusivo para assinantes do Plano Premium.</strong></p>
-    <p>Treino completo com acompanhamento e alta intensidade.</p>
-
-        <h3>Treino 1 - Peito Completo</h3>
-        <ul>
-            <li>Supino reto: 4x10</li>
-            <li>Supino inclinado: 4x10</li>
-            <li>Crossover: 4x12</li>
-        </ul>
-
-        <h3>Treino 2 - Costas Completo</h3>
-        <ul>
-            <li>Barra fixa: 4x8</li>
-            <li>Remada curvada: 4x10</li>
-            <li>Puxada alta: 4x12</li>
-        </ul>
-
-        <h3>Treino 3 - Pernas Completo</h3>
-        <ul>
-            <li>Agachamento: 4x10</li>
-            <li>Leg press: 4x12</li>
-            <li>Levantamento terra: 3x8</li>
-        </ul>
-    </section>
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2026 PowerFit. Todos os direitos reservados.</p>
+    <!-- FOOTER: Informações de copyright e links úteis -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2026 PowerFit Premium. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Termos de Uso</a>
+            </div>
+        </div>
     </footer>
-</body>
 
+</body>
 </html>

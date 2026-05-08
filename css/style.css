@@ -1,0 +1,597 @@
+/* ========================================================================== *
+ * Arquivo: style.css
+ * Descrição: Estilos CSS para o site PowerFit Premium.
+ *            Foco em UX/UI de alta qualidade, responsividade e animações.
+ * Autor: Manus AI
+ * Data: 07 de Maio de 2026
+ * ========================================================================== */
+
+/* ========================================================================== *
+ * 1. Variáveis CSS e Reset Básico
+ *    - Definição de cores, fontes e tamanhos para fácil manutenção.
+ *    - Reset de estilos padrão do navegador para consistência.
+ * ========================================================================== */
+:root {
+    --primary-color: #007bff; /* Azul vibrante para destaque */
+    --secondary-color: #6c757d; /* Cinza para elementos secundários */
+    --accent-color: #28a745; /* Verde para ações de sucesso/ênfase */
+    --dark-bg: #1a1a2e; /* Fundo escuro principal */
+    --light-bg: #2e2e4a; /* Fundo secundário/cards */
+    --text-color: #e0e0e0; /* Cor do texto principal */
+    --heading-color: #ffffff; /* Cor dos títulos */
+    --border-color: #444466; /* Cor de bordas e divisores */
+
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 40px;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Rolagem suave para âncoras */
+}
+
+body {
+    font-family: var(--font-secondary);
+    color: var(--text-color);
+    background-color: var(--dark-bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Estilos para o container centralizador de conteúdo */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* Estilos de links e botões */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--heading-color);
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--accent-color);
+    color: var(--heading-color);
+}
+
+.btn-secondary:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Estilos de títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    color: var(--heading-color);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3.5em; /* Título principal grande */
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+}
+
+h2::after { /* Linha decorativa abaixo dos títulos de seção */
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: var(--spacing-sm) auto 0 auto;
+    border-radius: 2px;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+/* ========================================================================== *
+ * 2. HEADER (Navegação Principal)
+ *    - Estilos para o cabeçalho fixo e responsivo.
+ *    - Animação de hover para os links de navegação.
+ * ========================================================================== */
+.main-header {
+    background-color: rgba(26, 26, 46, 0.95); /* Fundo semi-transparente */
+    padding: var(--spacing-md) 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header .logo {
+    font-family: var(--font-primary);
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--heading-color);
+}
+
+.main-header .logo .premium {
+    color: var(--primary-color);
+    font-size: 0.7em;
+    vertical-align: super;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav li {
+    margin-left: var(--spacing-lg);
+}
+
+.main-nav a {
+    color: var(--text-color);
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 5px; /* Espaço para a animação de sublinhado */
+}
+
+.main-nav a::after { /* Animação de sublinhado */
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease-out;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+/* ========================================================================== *
+ * 3. HERO SECTION (Seção de Destaque)
+ *    - Imagem de fundo parallax.
+ *    - Conteúdo centralizado com animações de entrada.
+ * ========================================================================== */
+.hero-section {
+    background: url('../img/hero-bg.jpg') no-repeat center center/cover; /* Imagem de fundo */
+    height: 100vh; /* Ocupa a altura total da viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Esconde elementos que transbordam */
+}
+
+.hero-section::before { /* Overlay escuro para melhorar a legibilidade do texto */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1; /* Garante que o conteúdo fique acima do overlay */
+    max-width: 800px;
+    animation: fadeInScale 1s ease-out forwards; /* Animação de entrada */
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.hero-content h1 {
+    font-size: 4.5em;
+    margin-bottom: var(--spacing-md);
+    color: var(--heading-color);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-color);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Animação de entrada para o conteúdo da Hero Section */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ========================================================================== *
+ * 4. SEÇÕES GERAIS
+ *    - Estilos comuns para todas as seções de conteúdo.
+ * ========================================================================== */
+section {
+    padding: var(--spacing-lg) 0;
+    margin-bottom: var(--spacing-lg);
+}
+
+.about-section, .contact-section {
+    background-color: var(--light-bg);
+    padding: var(--spacing-lg) 0;
+    border-radius: 8px;
+    margin: var(--spacing-lg) auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-section p, .contact-section p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-md) auto;
+}
+
+/* ========================================================================== *
+ * 5. SERVICES SECTION (Seção de Serviços)
+ *    - Layout em grid para os itens de serviço.
+ *    - Animações de hover para os cards de serviço.
+ * ========================================================================== */
+.services-section {
+    background-color: var(--dark-bg);
+    padding: var(--spacing-lg) 0;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Grid responsivo */
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.service-item {
+    background-color: var(--light-bg);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px); /* Animação de elevação no hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.service-item h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.service-item p {
+    font-size: 0.95em;
+    color: var(--text-color);
+}
+
+/* ========================================================================== *
+ * 6. GALLERY SECTION (Galeria de Imagens)
+ *    - Layout em grid responsivo para as imagens.
+ *    - Efeito de zoom no hover das imagens.
+ * ========================================================================== */
+.gallery-section {
+    background-color: var(--light-bg);
+    padding: var(--spacing-lg) 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05); /* Efeito de zoom no hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================================================== *
+ * 7. CONTACT SECTION (Seção de Contato)
+ *    - Estilos para o formulário de contato.
+ *    - Layout responsivo para os campos do formulário.
+ * ========================================================================== */
+.contact-section {
+    background-color: var(--dark-bg);
+    padding: var(--spacing-lg) 0;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto var(--spacing-lg) auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.contact-form input, .contact-form textarea {
+    padding: var(--spacing-sm);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    font-family: var(--font-secondary);
+    font-size: 1em;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: #a0a0a0;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.contact-form .btn-primary {
+    margin-top: var(--spacing-sm);
+    align-self: flex-start; /* Alinha o botão à esquerda */
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: var(--spacing-lg);
+    border-top: 1px solid var(--border-color);
+    padding-top: var(--spacing-md);
+}
+
+.contact-info p {
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.1em;
+}
+
+/* ========================================================================== *
+ * 8. FOOTER (Rodapé)
+ *    - Estilos para o rodapé do site.
+ *    - Links de navegação adicionais.
+ * ========================================================================== */
+.main-footer {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    padding: var(--spacing-md) 0;
+    text-align: center;
+    font-size: 0.9em;
+    border-top: 1px solid var(--border-color);
+}
+
+.main-footer .footer-links a {
+    color: var(--text-color);
+    margin: 0 var(--spacing-sm);
+}
+
+.main-footer .footer-links a:hover {
+    color: var(--primary-color);
+}
+
+/* ========================================================================== *
+ * 9. RESPONSIVIDADE
+ *    - Media queries para adaptar o layout a diferentes tamanhos de tela.
+ * ========================================================================== */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        margin-top: var(--spacing-md);
+    }
+
+    .main-nav li {
+        margin: var(--spacing-sm) 0;
+    }
+
+    .hero-content h1 {
+        font-size: 3em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .service-grid, .gallery-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .contact-form .btn-primary {
+        align-self: stretch; /* Botão ocupa largura total */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .main-header .logo {
+        font-size: 1.5em;
+    }
+}
+
+/* ========================================================================== *
+ * 10. ANIMAÇÕES ADICIONAIS (Exemplos)
+ *     - Animação de fundo sutil para o body.
+ *     - Animação de fade-in para seções ao rolar.
+ * ========================================================================== */
+/* Animação de fundo sutil */
+body {
+    background: linear-gradient(135deg, var(--dark-bg) 0%, #0f0f1a 100%);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Animação de fade-in para seções ao rolar (requer JavaScript para detecção de scroll, mas o CSS está pronto) */
+/* Para fins de demonstração, vamos aplicar um fade-in simples ao carregar a página */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* A classe 'fade-in-visible' seria adicionada via JavaScript quando a seção entra na viewport */
+section.fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Exemplo de animação para o logo */
+.main-header .logo {
+    animation: bounceIn 1s ease-out;
+}
+
+@keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% { transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); }
+    0% { opacity: 0; transform: scale3d(0.3, 0.3, 0.3); }
+    20% { transform: scale3d(1.1, 1.1, 1.1); }
+    40% { transform: scale3d(0.9, 0.9, 0.9); }
+    60% { opacity: 1; transform: scale3d(1.03, 1.03, 1.03); }
+    80% { transform: scale3d(0.97, 0.97, 0.97); }
+    100% { opacity: 1; transform: scale3d(1, 1, 1); }
+}
+
+/* Animação para botões no hover */
+.btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Efeito de brilho */
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+}
+
+.btn:hover::before {
+    left: 0;
+}
+
+/* Animação para itens de serviço */
+.service-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--primary-color);
+    transform: scaleX(0); /* Começa invisível */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.service-item:hover::after {
+    transform: scaleX(1); /* Expande no hover */
+    transform-origin: bottom left;
+}
+
+/* Animação para imagens da galeria */
+.gallery-grid img {
+    filter: grayscale(100%); /* Começa em preto e branco */
+    transition: filter 0.5s ease;
+}
+
+.gallery-grid img:hover {
+    filter: grayscale(0%); /* Colore no hover */
+}

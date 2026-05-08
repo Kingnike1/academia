@@ -3,37 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - PowerFit</title>
-    <link rel="stylesheet" href="../css/login.css">
+    <title>Login - PowerFit Premium</title>
+    <link rel="stylesheet" href="../css/style.css"> <!-- Link para o CSS principal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <h1>Login - PowerFit</h1>
-
-    <form action="./dashboard.html" method="post">
-
-        <div>
-            <label for="email">E-mail:</label><br>
-            <input type="email" id="email" name="email" required>
+    <!-- HEADER: Navegação principal do site (simplificada para páginas internas) -->
+    <header class="main-header">
+        <div class="container">
+            <a href="../index.html" class="logo">PowerFit <span class="premium">Premium</span></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html#hero">Início</a></li>
+                    <li><a href="../index.html#about">Sobre Nós</a></li>
+                    <li><a href="../index.html#services">Serviços</a></li>
+                    <li><a href="../index.html#gallery">Galeria</a></li>
+                    <li><a href="../index.html#contact">Contato</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <div>
-            <label for="senha">Senha:</label><br>
-            <input type="password" id="senha" name="senha" required>
+    <!-- LOGIN SECTION: Formulário de login -->
+    <section id="login" class="login-section">
+        <div class="container">
+            <h2>Acesse Sua Conta PowerFit Premium</h2>
+            <p>Bem-vindo de volta! Faça login para continuar sua jornada fitness.</p>
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="seu.email@exemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="Sua senha" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </form>
+            <p class="cadastro-link">Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+            <p class="forgot-password-link"><a href="#">Esqueceu sua senha?</a></p>
         </div>
+    </section>
 
-        <div>
-            <button type="submit">Entrar</button>
+    <!-- FOOTER: Informações de copyright e links úteis -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2026 PowerFit Premium. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Termos de Uso</a>
+            </div>
         </div>
-
-    </form>
-
-    <p>
-        Não tem conta? <a href="./cadastro.html">Cadastre-se</a>
-    </p>
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2026 PowerFit. Todos os direitos reservados.</p>
     </footer>
+
 </body>
 </html>
