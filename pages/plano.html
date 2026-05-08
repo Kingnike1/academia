@@ -3,86 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planos - PowerFit Premium</title>
-    <link rel="stylesheet" href="../css/style.css"> <!-- Link para o CSS principal -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Planos | PowerFit Premium</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="padding-top: 100px;">
 
-    <!-- HEADER: Navegação principal do site (simplificada para páginas internas) -->
     <header class="main-header">
         <div class="container">
-            <a href="../index.html" class="logo">PowerFit <span class="premium">Premium</span></a>
+            <a href="../index.html" class="logo" style="text-decoration:none;">Power<span>Fit</span></a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="../index.html#hero">Início</a></li>
-                    <li><a href="../index.html#about">Sobre Nós</a></li>
-                    <li><a href="../index.html#services">Serviços</a></li>
-                    <li><a href="../index.html#gallery">Galeria</a></li>
-                    <li><a href="../index.html#contact">Contato</a></li>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="login.html">Login</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- PLANOS SECTION: Apresentação dos planos de assinatura -->
-    <section id="planos" class="planos-section">
-        <div class="container">
-            <h2>Escolha o Plano Ideal para Você</h2>
-            <p>Temos opções flexíveis para atender às suas necessidades e objetivos fitness.</p>
-
-            <div class="plan-grid">
-                <div class="plan-card">
-                    <h3>Plano Básico</h3>
-                    <p class="price">R$ 79,90<span>/mês</span></p>
-                    <ul>
-                        <li>Acesso ilimitado à academia</li>
-                        <li>Equipamentos modernos</li>
-                        <li>Aulas em grupo (selecionadas)</li>
-                        <li>Suporte online básico</li>
-                    </ul>
-                    <a href="#" class="btn btn-primary">Escolher Plano</a>
-                </div>
-
-                <div class="plan-card featured">
-                    <h3>Plano Premium</h3>
-                    <p class="price">R$ 129,90<span>/mês</span></p>
-                    <ul>
-                        <li>Tudo do Plano Básico</li>
-                        <li>Acesso a todas as aulas em grupo</li>
-                        <li>1 sessão com Personal Trainer/mês</li>
-                        <li>Avaliação física trimestral</li>
-                        <li>Acesso exclusivo a workshops</li>
-                    </ul>
-                    <a href="#" class="btn btn-secondary">Escolher Plano</a>
-                </div>
-
-                <div class="plan-card">
-                    <h3>Plano VIP</h3>
-                    <p class="price">R$ 199,90<span>/mês</span></p>
-                    <ul>
-                        <li>Tudo do Plano Premium</li>
-                        <li>4 sessões com Personal Trainer/mês</li>
-                        <li>Plano de nutrição personalizado</li>
-                        <li>Acompanhamento 24/7 via app</li>
-                        <li>Acesso prioritário a eventos</li>
-                    </ul>
-                    <a href="#" class="btn btn-primary">Escolher Plano</a>
-                </div>
+    <section class="container">
+        <h2>Escolha Seu Plano</h2>
+        <div class="service-grid">
+            <div class="service-item" style="text-align: center;">
+                <h3>Básico</h3>
+                <p style="font-size: 2rem; color: #fff; margin: 20px 0;">R$ 79,90</p>
+                <ul style="list-style: none; margin-bottom: 30px; color: #94a3b8;">
+                    <li>Acesso à Musculação</li>
+                    <li>Horário Comercial</li>
+                    <li>App de Treino</li>
+                </ul>
+                <a href="cadastro.html" class="btn btn-secondary">Selecionar</a>
+            </div>
+            <div class="service-item" style="text-align: center; border-color: var(--primary-color); background: #0f172a;">
+                <h3 style="color: var(--primary-color);">Premium</h3>
+                <p style="font-size: 2rem; color: #fff; margin: 20px 0;">R$ 129,90</p>
+                <ul style="list-style: none; margin-bottom: 30px; color: #94a3b8;">
+                    <li>Acesso Ilimitado 24h</li>
+                    <li>Todas as Aulas Coletivas</li>
+                    <li>Avaliação Mensal</li>
+                </ul>
+                <a href="cadastro.html" class="btn btn-primary">Selecionar</a>
+            </div>
+            <div class="service-item" style="text-align: center;">
+                <h3>VIP</h3>
+                <p style="font-size: 2rem; color: #fff; margin: 20px 0;">R$ 199,90</p>
+                <ul style="list-style: none; margin-bottom: 30px; color: #94a3b8;">
+                    <li>Personal Trainer 2x/semana</li>
+                    <li>Nutricionista Incluso</li>
+                    <li>Área VIP e Toalhas</li>
+                </ul>
+                <a href="cadastro.html" class="btn btn-secondary">Selecionar</a>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER: Informações de copyright e links úteis -->
-    <footer class="main-footer">
+    <footer>
         <div class="container">
             <p>&copy; 2026 PowerFit Premium. Todos os direitos reservados.</p>
-            <div class="footer-links">
-                <a href="#">Política de Privacidade</a>
-                <a href="#">Termos de Uso</a>
-            </div>
         </div>
     </footer>
 
