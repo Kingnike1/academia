@@ -3,102 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Treino - PowerFit Premium</title>
-    <link rel="stylesheet" href="../css/style.css"> <!-- Link para o CSS principal -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Treino | PowerFit Premium</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="padding-top: 100px;">
 
-    <!-- HEADER: Navegação principal do site (simplificada para páginas internas) -->
     <header class="main-header">
         <div class="container">
-            <a href="../index.html" class="logo">PowerFit <span class="premium">Premium</span></a>
+            <a href="../index.html" class="logo" style="text-decoration:none;">Power<span>Fit</span></a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="../index.html#hero">Início</a></li>
-                    <li><a href="../index.html#about">Sobre Nós</a></li>
-                    <li><a href="../index.html#services">Serviços</a></li>
-                    <li><a href="../index.html#gallery">Galeria</a></li>
-                    <li><a href="../index.html#contact">Contato</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="catalogo.html">Todos os Treinos</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- TREINO SECTION: Detalhes de um treino específico -->
-    <section id="treino" class="treino-section">
-        <div class="container">
-            <h2>Treino de Força Total</h2>
-            <p class="treino-description">Este treino é focado no desenvolvimento de força e massa muscular, abrangendo os principais grupos musculares do corpo.</p>
+    <section class="container">
+        <div style="margin-bottom: 40px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
+            <div>
+                <h2 style="text-align: left; margin-bottom: 10px;">Peito & Tríceps</h2>
+                <p style="color: #94a3b8;">Nível: Intermediário | Foco: Hipertrofia</p>
+            </div>
+            <div class="btn btn-secondary" style="cursor: default;">60 Minutos</div>
+        </div>
 
-            <div class="treino-details">
-                <div class="detail-item">
-                    <h3>Duração</h3>
-                    <p>60-75 minutos</p>
+        <div style="display: grid; gap: 20px;">
+            <!-- Exercício 1 -->
+            <div style="background: #1e293b; padding: 30px; border-radius: 15px; border-left: 5px solid var(--primary-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div>
+                    <h3 style="color: #fff; margin-bottom: 5px;">Supino Reto</h3>
+                    <p style="color: #94a3b8;">4 Séries de 10-12 Repetições</p>
                 </div>
-                <div class="detail-item">
-                    <h3>Frequência</h3>
-                    <p>3 vezes por semana</p>
-                </div>
-                <div class="detail-item">
-                    <h3>Nível</h3>
-                    <p>Intermediário/Avançado</p>
-                </div>
+                <div style="color: var(--primary-color); font-weight: bold;">Descanso: 60s</div>
             </div>
 
-            <div class="exercicios-list">
-                <h3>Exercícios</h3>
-                <div class="exercicio-item">
-                    <h4>Agachamento Livre</h4>
-                    <p>4 séries de 8-12 repetições</p>
-                    <p class="equipment">Equipamento: Barra, Anilhas</p>
+            <!-- Exercício 2 -->
+            <div style="background: #1e293b; padding: 30px; border-radius: 15px; border-left: 5px solid var(--primary-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div>
+                    <h3 style="color: #fff; margin-bottom: 5px;">Crucifixo Inclinado</h3>
+                    <p style="color: #94a3b8;">3 Séries de 12 Repetições</p>
                 </div>
-                <div class="exercicio-item">
-                    <h4>Supino Reto com Barra</h4>
-                    <p>4 séries de 8-12 repetições</p>
-                    <p class="equipment">Equipamento: Barra, Anilhas, Banco</p>
-                </div>
-                <div class="exercicio-item">
-                    <h4>Remada Curvada</h4>
-                    <p>4 séries de 8-12 repetições</p>
-                    <p class="equipment">Equipamento: Barra, Anilhas</p>
-                </div>
-                <div class="exercicio-item">
-                    <h4>Desenvolvimento com Halteres</h4>
-                    <p>3 séries de 10-15 repetições</p>
-                    <p class="equipment">Equipamento: Halteres, Banco</p>
-                </div>
-                <div class="exercicio-item">
-                    <h4>Elevação Lateral</h4>
-                    <p>3 séries de 12-15 repetições</p>
-                    <p class="equipment">Equipamento: Halteres</p>
-                </div>
+                <div style="color: var(--primary-color); font-weight: bold;">Descanso: 45s</div>
             </div>
 
-            <div class="treino-tips">
-                <h3>Dicas Importantes</h3>
-                <ul>
-                    <li>Mantenha a forma correta em todos os exercícios para evitar lesões.</li>
-                    <li>Descanse de 60 a 90 segundos entre as séries.</li>
-                    <li>Aumente a carga progressivamente para continuar desafiando seus músculos.</li>
-                    <li>Não se esqueça de um bom aquecimento antes e alongamento depois do treino.</li>
-                </ul>
+            <!-- Exercício 3 -->
+            <div style="background: #1e293b; padding: 30px; border-radius: 15px; border-left: 5px solid var(--primary-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div>
+                    <h3 style="color: #fff; margin-bottom: 5px;">Tríceps Corda</h3>
+                    <p style="color: #94a3b8;">4 Séries de 15 Repetições</p>
+                </div>
+                <div style="color: var(--primary-color); font-weight: bold;">Descanso: 45s</div>
             </div>
+        </div>
 
-            <a href="catalogo.html" class="btn btn-secondary">Voltar ao Catálogo</a>
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="dashboard.html" class="btn btn-primary">Finalizar Treino</a>
         </div>
     </section>
 
-    <!-- FOOTER: Informações de copyright e links úteis -->
-    <footer class="main-footer">
+    <footer>
         <div class="container">
             <p>&copy; 2026 PowerFit Premium. Todos os direitos reservados.</p>
-            <div class="footer-links">
-                <a href="#">Política de Privacidade</a>
-                <a href="#">Termos de Uso</a>
-            </div>
         </div>
     </footer>
 

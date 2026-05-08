@@ -3,85 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Exercícios - PowerFit Premium</title>
-    <link rel="stylesheet" href="../css/style.css"> <!-- Link para o CSS principal -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Catálogo | PowerFit Premium</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="padding-top: 100px;">
 
-    <!-- HEADER: Navegação principal do site (simplificada para páginas internas) -->
     <header class="main-header">
         <div class="container">
-            <a href="../index.html" class="logo">PowerFit <span class="premium">Premium</span></a>
+            <a href="../index.html" class="logo" style="text-decoration:none;">Power<span>Fit</span></a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="../index.html#hero">Início</a></li>
-                    <li><a href="../index.html#about">Sobre Nós</a></li>
-                    <li><a href="../index.html#services">Serviços</a></li>
-                    <li><a href="../index.html#gallery">Galeria</a></li>
-                    <li><a href="../index.html#contact">Contato</a></li>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="dashboard.html">Meu Painel</a></li>
+                    <li><a href="plano.html">Planos</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- CATALOGO SECTION: Lista de exercícios -->
-    <section id="catalogo" class="catalogo-section">
-        <div class="container">
-            <h2>Nosso Catálogo de Exercícios</h2>
-            <p>Explore uma vasta gama de exercícios para todos os grupos musculares e níveis de condicionamento.</p>
+    <section class="container">
+        <h2>Biblioteca de Treinos</h2>
+        <p style="text-align: center; color: #94a3b8; margin-top: -40px; margin-bottom: 60px;">Escolha seu foco para hoje e supere seus limites.</p>
 
-            <div class="exercicio-grid">
-                <div class="exercicio-card">
-                    <img src="../img/exercicio1.jpg" alt="Agachamento">
-                    <h3>Agachamento Livre</h3>
-                    <p>Fortalece pernas e glúteos. Essencial para força funcional.</p>
-                    <a href="treino.html" class="btn btn-primary">Ver Detalhes</a>
-                </div>
-                <div class="exercicio-card">
-                    <img src="../img/exercicio2.jpg" alt="Supino">
-                    <h3>Supino Reto</h3>
-                    <p>Desenvolve peitoral, ombros e tríceps. Um clássico da musculação.</p>
-                    <a href="treino.html" class="btn btn-primary">Ver Detalhes</a>
-                </div>
-                <div class="exercicio-card">
-                    <img src="../img/exercicio3.jpg" alt="Remada">
-                    <h3>Remada Curvada</h3>
-                    <p>Trabalha as costas e bíceps, melhorando a postura e força.</p>
-                    <a href="treino.html" class="btn btn-primary">Ver Detalhes</a>
-                </div>
-                <div class="exercicio-card">
-                    <img src="../img/exercicio4.jpg" alt="Desenvolvimento">
-                    <h3>Desenvolvimento Ombro</h3>
-                    <p>Foca nos deltoides, construindo ombros fortes e definidos.</p>
-                    <a href="treino.html" class="btn btn-primary">Ver Detalhes</a>
-                </div>
-                <div class="exercicio-card">
-                    <img src="../img/exercicio5.jpg" alt="Prancha">
-                    <h3>Prancha Abdominal</h3>
-                    <p>Fortalece o core, melhora a estabilidade e reduz dores nas costas.</p>
-                    <a href="treino.html" class="btn btn-primary">Ver Detalhes</a>
-                </div>
-                <div class="exercicio-card">
-                    <img src="../img/exercicio6.jpg" alt="Afundo">
-                    <h3>Afundo com Halteres</h3>
-                    <p>Exercício unilateral para pernas e glúteos, melhora equilíbrio.</p>
-                    <a href="treino.html" class="btn btn-primary">Ver Detalhes</a>
-                </div>
+        <div class="service-grid">
+            <div class="service-item">
+                <div style="height: 150px; background: #334155; border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #475569;">IMAGEM</div>
+                <h3>Força Máxima</h3>
+                <p style="margin-bottom: 20px;">Treino focado em grandes grupos musculares e cargas elevadas.</p>
+                <a href="treino.html" class="btn btn-primary" style="width: 100%; text-align: center;">Ver Exercícios</a>
+            </div>
+            <div class="service-item">
+                <div style="height: 150px; background: #334155; border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #475569;">IMAGEM</div>
+                <h3>Definição & Cardio</h3>
+                <p style="margin-bottom: 20px;">Circuitos de alta intensidade para queima de gordura e resistência.</p>
+                <a href="treino.html" class="btn btn-primary" style="width: 100%; text-align: center;">Ver Exercícios</a>
+            </div>
+            <div class="service-item">
+                <div style="height: 150px; background: #334155; border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #475569;">IMAGEM</div>
+                <h3>Mobilidade & Yoga</h3>
+                <p style="margin-bottom: 20px;">Foco em flexibilidade, postura e recuperação muscular ativa.</p>
+                <a href="treino.html" class="btn btn-primary" style="width: 100%; text-align: center;">Ver Exercícios</a>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER: Informações de copyright e links úteis -->
-    <footer class="main-footer">
+    <footer>
         <div class="container">
             <p>&copy; 2026 PowerFit Premium. Todos os direitos reservados.</p>
-            <div class="footer-links">
-                <a href="#">Política de Privacidade</a>
-                <a href="#">Termos de Uso</a>
-            </div>
         </div>
     </footer>
 
